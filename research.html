@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Research and teaching interests of Dr. Rachael Kalaba spanning Ubuntu Leadership, African Women and Girls Leadership, and Indigenous feminist frameworks." />
+<title>Research | Dr. Rachael Kalaba</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&family=Raleway:wght@200;300;400;500&display=swap" rel="stylesheet" />
+<style>
+:root {
+  --white:        #ffffff;
+  --gold-display: #b8892a;
+  --gold-text:    #7a5c1a;
+  --gold-rule:    rgba(184,137,42,0.25);
+  --gold-border:  rgba(184,137,42,0.45);
+  --gold-strong:  #d4a84a;
+  --text-dark:    #3a2e1a;
+  --text-mid:     #5c4a2a;
+  --text-subtle:  #7a6545;
+  --font-raleway: 'Raleway', sans-serif;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Jost', sans-serif; background: var(--white); color: var(--text-dark); font-size: 16px; line-height: 1.7; font-weight: 300; }
+:focus-visible { outline: 3px solid var(--gold-text); outline-offset: 3px; border-radius: 2px; }
+.sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+.gold-rule { border: none; border-top: 1px solid var(--gold-rule); margin: 0; }
+
+/* HERO */
+.hero-header { min-height:100vh; background:var(--white); display:flex; flex-direction:column; justify-content:center; padding:5rem; border-bottom:1px solid var(--gold-rule); }
+.hero-eyebrow { font-family:var(--font-raleway); font-size:0.72rem; letter-spacing:0.3em; text-transform:uppercase; color:var(--gold-text); margin-bottom:1.5rem; font-weight:400; }
+.hero-name { font-family:'Cormorant Garamond',serif; font-size:clamp(3.5rem,7vw,7rem); font-weight:300; color:var(--text-dark); line-height:1.0; margin-bottom:0.5rem; }
+.hero-name em { font-style:italic; color:var(--gold-display); }
+.hero-academic-title { font-family:'Cormorant Garamond',serif; font-size:1.4rem; color:var(--text-subtle); font-weight:300; font-style:italic; margin-bottom:2rem; }
+.hero-description { font-size:1rem; color:var(--text-mid); line-height:1.9; max-width:600px; font-weight:300; margin-bottom:3rem; }
+.hero-cta { display:flex; gap:1rem; flex-wrap:wrap; margin-bottom:4rem; }
+
+/* BUTTONS */
+.btn-primary { background:var(--white); color:var(--gold-text); border:2px solid var(--gold-text); padding:0.85rem 2rem; font-size:0.78rem; letter-spacing:0.12em; text-transform:uppercase; font-weight:500; text-decoration:none; font-family:'Jost',sans-serif; display:inline-flex; align-items:center; min-height:44px; transition:background 0.2s,color 0.2s; }
+.btn-primary:hover { background:var(--gold-text); color:var(--white); }
+.btn-outline { color:var(--text-mid); border:1px solid var(--gold-border); padding:0.85rem 2rem; font-size:0.78rem; letter-spacing:0.12em; text-transform:uppercase; font-weight:400; text-decoration:none; font-family:'Jost',sans-serif; display:inline-flex; align-items:center; min-height:44px; transition:border-color 0.2s,color 0.2s; }
+.btn-outline:hover { border-color:var(--gold-text); color:var(--gold-text); }
+
+/* STAT GRID */
+.stat-grid { display:grid; grid-template-columns:repeat(4,1fr); border:1px solid var(--gold-rule); }
+.stat-card { background:var(--white); padding:2rem; border-right:1px solid var(--gold-rule); }
+.stat-card:last-child { border-right:none; }
+.stat-number { font-family:'Cormorant Garamond',serif; font-size:3rem; font-weight:300; color:var(--gold-display); line-height:1; margin-bottom:0.4rem; }
+.stat-label { font-size:0.78rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--text-subtle); font-weight:400; }
+
+/* QUICK CARDS */
+.quick-grid { display:grid; grid-template-columns:repeat(3,1fr); border:1px solid var(--gold-rule); border-bottom:none; }
+.quick-card { background:var(--white); padding:2.5rem 2rem 3.5rem; text-decoration:none; display:block; border-right:1px solid var(--gold-rule); border-bottom:1px solid var(--gold-rule); position:relative; transition:border-color 0.2s; }
+.quick-card:hover { border-color:var(--gold-strong); }
+.quick-card:hover .quick-card-title { text-decoration:underline; }
+.quick-card-label { font-family:var(--font-raleway); font-size:0.68rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--gold-text); font-weight:400; margin-bottom:0.75rem; }
+.quick-card-title { font-family:'Cormorant Garamond',serif; font-size:1.45rem; font-weight:400; color:var(--text-dark); line-height:1.2; margin-bottom:0.75rem; }
+.quick-card-desc { font-size:0.88rem; color:var(--text-subtle); font-weight:300; line-height:1.6; }
+.quick-card-arrow { position:absolute; bottom:1.5rem; right:2rem; font-size:1rem; color:var(--gold-strong); }
+
+/* PAGE HEADER */
+.page-header { padding:5rem 5rem 4rem; background:var(--white); border-bottom:2px solid var(--gold-strong); }
+.page-eyebrow { font-family:var(--font-raleway); font-size:0.72rem; letter-spacing:0.3em; text-transform:uppercase; color:var(--gold-text); margin-bottom:1rem; font-weight:400; }
+.page-title { font-family:'Cormorant Garamond',serif; font-size:clamp(2.8rem,5vw,5rem); font-weight:300; color:var(--text-dark); line-height:1.05; }
+.page-title em { font-style:italic; color:var(--gold-display); }
+.page-subtitle { font-size:1rem; color:var(--text-subtle); margin-top:1rem; font-weight:300; max-width:600px; }
+
+/* CONTENT */
+.content { padding:5rem; background:var(--white); }
+.section-label { font-family:var(--font-raleway); font-size:0.72rem; letter-spacing:0.3em; text-transform:uppercase; color:var(--gold-text); font-weight:400; margin-bottom:1rem; }
+.section-title { font-family:'Cormorant Garamond',serif; font-size:clamp(1.8rem,3vw,2.6rem); font-weight:300; color:var(--text-dark); line-height:1.15; margin-bottom:3rem; }
+.section-title em { font-style:italic; color:var(--gold-display); }
+
+/* SCHOLAR PROFILE BLOCK */
+.scholar-profile { border-left:3px solid var(--gold-strong); padding:2rem 2.5rem; margin-bottom:3rem; background:var(--white); }
+.scholar-profile p { font-family:'Cormorant Garamond',serif; font-size:1.15rem; color:var(--text-dark); line-height:1.85; font-weight:400; margin-bottom:1rem; }
+.scholar-profile p:last-child { margin-bottom:0; }
+
+/* ABOUT */
+.about-grid { display:grid; grid-template-columns:1.2fr 1fr; gap:6rem; align-items:start; }
+.about-text p { font-size:1.05rem; line-height:1.9; color:var(--text-mid); margin-bottom:1.5rem; font-weight:300; }
+.about-text p:first-child { font-family:'Cormorant Garamond',serif; font-size:1.4rem; color:var(--text-dark); font-weight:400; line-height:1.6; }
+.about-sidebar { display:flex; flex-direction:column; gap:2rem; }
+.info-block { padding-bottom:1.5rem; border-bottom:1px solid var(--gold-rule); }
+.info-label { font-family:var(--font-raleway); font-size:0.68rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--gold-text); margin-bottom:0.5rem; font-weight:400; }
+.info-value { font-size:0.95rem; color:var(--text-mid); font-weight:300; }
+.badge-row { display:flex; flex-wrap:wrap; gap:0.5rem; margin-top:1rem; }
+.badge { font-size:0.7rem; letter-spacing:0.08em; padding:0.35rem 0.85rem; border:1px solid var(--gold-border); color:var(--gold-text); text-transform:uppercase; font-weight:500; }
+
+/* RESEARCH */
+.research-grid { display:grid; grid-template-columns:repeat(3,1fr); border:1px solid var(--gold-rule); border-bottom:none; border-right:none; }
+.research-item { background:var(--white); padding:2.5rem 2rem; border-right:1px solid var(--gold-rule); border-bottom:1px solid var(--gold-rule); }
+.research-number { font-family:'Cormorant Garamond',serif; font-size:2.5rem; font-weight:300; color:var(--gold-strong); line-height:1; margin-bottom:1rem; display:block; opacity:0.4; }
+.research-item h3 { font-family:'Cormorant Garamond',serif; font-size:1.15rem; font-weight:500; color:var(--text-dark); line-height:1.3; margin-bottom:0.75rem; }
+.research-item p { font-size:0.88rem; color:var(--text-subtle); line-height:1.7; font-weight:300; }
+
+/* TIMELINE */
+.timeline { display:flex; flex-direction:column; border-left:1px solid var(--gold-strong); margin-left:1rem; }
+.timeline-item { padding:0 0 3rem 3rem; position:relative; }
+.timeline-item::before { content:''; position:absolute; left:-5px; top:8px; width:9px; height:9px; background:var(--white); border:2px solid var(--gold-display); }
+.timeline-period { font-family:var(--font-raleway); font-size:0.68rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--gold-text) !important; margin-bottom:0.5rem; font-weight:500; }
+.timeline-role { font-family:'Cormorant Garamond',serif; font-size:1.3rem; font-weight:500; color:var(--text-dark); line-height:1.2; margin-bottom:0.2rem; }
+.timeline-org { font-size:0.88rem; color:var(--text-subtle); font-weight:300; margin-bottom:0.6rem; }
+.timeline-desc { font-size:0.88rem; color:var(--text-mid); font-weight:300; line-height:1.7; margin-top:0.5rem; padding-top:0.5rem; border-top:1px solid var(--gold-rule); max-width:680px; }
+.timeline-heading { font-family:var(--font-raleway); font-size:0.72rem; font-weight:400; letter-spacing:0.3em; text-transform:uppercase; color:var(--gold-text); margin-bottom:3rem; }
+
+/* EDUCATION */
+.edu-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:2rem; }
+.edu-card { background:var(--white); padding:2.5rem; border:1px solid var(--gold-rule); border-top:2px solid var(--gold-display); }
+.edu-degree { font-family:'Cormorant Garamond',serif; font-size:1.3rem; font-weight:500; color:var(--text-dark); line-height:1.2; margin-bottom:0.5rem; }
+.edu-institution { font-family:var(--font-raleway); font-size:0.68rem; letter-spacing:0.1em; color:var(--gold-text); text-transform:uppercase; font-weight:400; margin-bottom:0.25rem; }
+.edu-year { font-size:0.85rem; color:var(--text-subtle); margin-bottom:1rem; }
+.edu-note { font-size:0.88rem; color:var(--text-mid); line-height:1.7; font-weight:300; border-top:1px solid var(--gold-rule); padding-top:1rem; margin-top:1rem; }
+
+/* FELLOWSHIPS */
+.fellowship-list { display:flex; flex-direction:column; gap:0; }
+.fellowship-entry { padding:1.5rem 0; border-bottom:1px solid var(--gold-rule); display:grid; grid-template-columns:1fr auto; gap:2rem; align-items:start; }
+.fellowship-title { font-family:'Cormorant Garamond',serif; font-size:1.1rem; font-weight:500; color:var(--text-dark); margin-bottom:0.25rem; }
+.fellowship-org { font-size:0.88rem; color:var(--text-subtle); font-weight:300; margin-bottom:0.5rem; }
+.fellowship-desc { font-size:0.88rem; color:var(--text-mid); font-weight:300; line-height:1.7; }
+.fellowship-year { font-family:var(--font-raleway); font-size:0.68rem; letter-spacing:0.1em; color:var(--gold-text); text-transform:uppercase; font-weight:500; white-space:nowrap; text-align:right; }
+
+/* GRANTS CARDS */
+.fellowships-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem; margin-bottom:4rem; }
+.fellowship-card { padding:2rem; border:1px solid var(--gold-rule); border-top:2px solid var(--gold-display); background:var(--white); }
+.fellowship-amount { font-family:'Cormorant Garamond',serif; font-size:2rem; font-weight:300; color:var(--gold-display); line-height:1; margin-bottom:0.5rem; }
+.fellowship-name { font-size:0.9rem; font-weight:500; color:var(--text-dark); line-height:1.4; margin-bottom:0.25rem; }
+.fellowship-card-org { font-size:0.82rem; color:var(--text-subtle); font-weight:300; }
+.fellowship-card-year { font-family:var(--font-raleway); font-size:0.65rem; letter-spacing:0.1em; color:var(--gold-text); text-transform:uppercase; margin-top:0.75rem; display:block; font-weight:500; }
+
+/* AWARDS */
+.awards-list { display:grid; grid-template-columns:repeat(2,1fr); border:1px solid var(--gold-rule); border-bottom:none; border-right:none; }
+.award-item { padding:1.25rem 2rem; background:var(--white); display:flex; justify-content:space-between; align-items:center; gap:1rem; border-right:1px solid var(--gold-rule); border-bottom:1px solid var(--gold-rule); }
+.award-name { font-size:0.9rem; color:var(--text-mid); font-weight:300; line-height:1.4; }
+.award-year-amount { text-align:right; }
+.award-year { font-family:'Cormorant Garamond',serif; font-size:1.05rem; color:var(--gold-display); font-weight:300; white-space:nowrap; display:block; }
+.award-amount { font-family:var(--font-raleway); font-size:0.65rem; letter-spacing:0.08em; color:var(--gold-text); font-weight:500; white-space:nowrap; display:block; margin-top:0.1rem; }
+
+/* PUBLICATIONS */
+.pub-category { margin-bottom:3.5rem; }
+.pub-category-label { font-family:var(--font-raleway); font-size:0.68rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--gold-text); margin-bottom:1.5rem; font-weight:400; padding-bottom:0.75rem; border-bottom:1px solid var(--gold-rule); }
+.pub-item { padding:1.25rem 0; border-bottom:1px solid var(--gold-rule); display:grid; grid-template-columns:auto 1fr; gap:1.5rem; align-items:start; }
+.pub-year { font-family:'Cormorant Garamond',serif; font-size:1rem; color:var(--gold-text); font-weight:500; white-space:nowrap; min-width:90px; }
+.pub-title { font-size:0.95rem; color:var(--text-dark); line-height:1.5; font-weight:400; }
+.pub-journal { font-size:0.85rem; color:var(--text-subtle); margin-top:0.2rem; font-weight:300; }
+.pub-note { font-size:0.82rem; color:var(--text-mid); margin-top:0.3rem; font-weight:300; font-style:italic; line-height:1.6; }
+.pub-status { display:inline-block; font-size:0.62rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--gold-text); border:1px solid var(--gold-border); padding:0.18rem 0.5rem; margin-left:0.5rem; vertical-align:middle; font-weight:500; }
+.manuscript-item { padding:1.25rem 0; border-bottom:1px solid var(--gold-rule); }
+.manuscript-title { font-size:0.95rem; color:var(--text-dark); font-weight:400; line-height:1.5; margin-bottom:0.3rem; }
+.manuscript-note { font-size:0.85rem; color:var(--text-subtle); font-weight:300; }
+
+/* PRESENTATIONS */
+.pres-item { padding:1.5rem 0; border-bottom:1px solid var(--gold-rule); display:grid; grid-template-columns:70px 1fr; gap:1.5rem; align-items:start; }
+.pres-year { font-family:'Cormorant Garamond',serif; font-size:1.1rem; color:var(--gold-text); font-weight:500; }
+.pres-title { font-size:0.9rem; color:var(--text-dark); font-weight:400; line-height:1.5; margin-bottom:0.2rem; }
+.pres-venue { font-size:0.82rem; color:var(--text-subtle); font-weight:300; }
+.pres-type { display:inline-block; font-size:0.6rem; letter-spacing:0.08em; text-transform:uppercase; border:1px solid var(--gold-border); color:var(--gold-text); padding:0.18rem 0.5rem; margin-left:0.5rem; font-weight:500; vertical-align:middle; }
+.pres-type.plenary { background:var(--gold-text); color:var(--white); border-color:var(--gold-text); }
+.pres-type.invited { border-color:var(--gold-text); color:var(--gold-text); }
+.year-divider { font-family:var(--font-raleway); font-size:0.72rem; letter-spacing:0.3em; text-transform:uppercase; color:var(--gold-text); font-weight:400; padding:2rem 0 0.5rem; border-bottom:1px solid var(--gold-rule); margin-bottom:0; }
+
+/* SERVICE */
+.two-col { display:grid; grid-template-columns:1fr 1fr; gap:5rem; align-items:start; }
+.col-title { font-family:'Cormorant Garamond',serif; font-size:1.6rem; font-weight:400; color:var(--text-dark); margin-bottom:2rem; padding-bottom:0.75rem; border-bottom:1px solid var(--gold-strong); }
+.service-item { padding:0.85rem 0; border-bottom:1px solid var(--gold-rule); display:flex; justify-content:space-between; gap:1rem; align-items:start; }
+.service-role { font-size:0.9rem; color:var(--text-dark); font-weight:400; line-height:1.4; }
+.service-org { font-size:0.82rem; color:var(--text-subtle); font-weight:300; }
+.service-years { font-family:var(--font-raleway); font-size:0.68rem; color:var(--gold-text); white-space:nowrap; font-weight:500; letter-spacing:0.08em; text-transform:uppercase; }
+.teaching-area { font-size:0.9rem; color:var(--text-mid); padding:0.75rem 0 0.75rem 1.25rem; border-left:2px solid var(--gold-strong); margin-bottom:0.75rem; font-weight:300; line-height:1.4; }
+.community-item { padding:1.25rem 0; border-bottom:1px solid var(--gold-rule); }
+.community-role { font-family:'Cormorant Garamond',serif; font-size:1.05rem; font-weight:500; color:var(--text-dark); margin-bottom:0.15rem; }
+.community-org { font-size:0.82rem; color:var(--gold-text); font-weight:500; margin-bottom:0.4rem; font-family:var(--font-raleway); letter-spacing:0.05em; }
+.community-desc { font-size:0.88rem; color:var(--text-mid); font-weight:300; line-height:1.7; }
+.skills-grid { display:grid; grid-template-columns:1fr 1fr; gap:2rem; margin-top:1rem; }
+.skill-block { padding:1.5rem; border:1px solid var(--gold-rule); border-top:2px solid var(--gold-display); }
+.skill-label { font-family:var(--font-raleway); font-size:0.68rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--gold-text); font-weight:400; margin-bottom:0.75rem; }
+.skill-list { font-size:0.88rem; color:var(--text-mid); font-weight:300; line-height:1.9; }
+
+/* FOOTER */
+footer { background:var(--white); padding:4rem 5rem; display:grid; grid-template-columns:repeat(3,1fr); gap:3rem; align-items:start; border-top:2px solid var(--gold-strong); }
+footer > div { min-width:0; }
+.footer-name { font-family:'Cormorant Garamond',serif; font-size:1.5rem; color:var(--text-dark); font-weight:300; margin-bottom:0.5rem; }
+.footer-tagline { font-size:0.85rem; color:var(--text-subtle); font-weight:300; line-height:1.6; }
+.footer-section-title { font-family:var(--font-raleway); font-size:0.68rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--gold-text); margin-bottom:1rem; font-weight:400; }
+.footer-link { display:flex; align-items:center; font-size:0.9rem; color:var(--text-mid); text-decoration:none; padding:0.4rem 0; font-weight:300; transition:color 0.2s; min-height:44px; border-bottom:1px solid var(--gold-rule); }
+.footer-link:hover { color:var(--gold-text); }
+.footer-location { font-size:0.9rem; color:var(--text-mid); padding:0.4rem 0; font-weight:300; border-bottom:1px solid var(--gold-rule); }
+.footer-bottom { background:var(--white); padding:1.5rem 5rem; display:flex; justify-content:space-between; align-items:center; border-top:1px solid var(--gold-rule); }
+.footer-bottom p { font-size:0.75rem; color:var(--text-subtle); font-weight:300; letter-spacing:0.05em; }
+.footer-bottom .accent { font-family:'Cormorant Garamond',serif; color:var(--gold-text); font-size:0.9rem; font-style:italic; }
+
+/* RESPONSIVE */
+@media (max-width:960px) {
+  .content { padding:3rem 2rem; }
+  .page-header { padding:3rem 2rem 2rem; }
+  .hero-header { padding:3rem 2rem; }
+  .about-grid,.two-col { grid-template-columns:1fr; gap:3rem; }
+  .research-grid,.edu-grid,.fellowships-grid,.skills-grid { grid-template-columns:1fr; }
+  .awards-list { grid-template-columns:1fr; }
+  .stat-grid { grid-template-columns:1fr 1fr; }
+  .quick-grid { grid-template-columns:1fr; }
+  footer { padding:3rem 2rem; }
+  .footer-bottom { padding:1rem 2rem; }
+  .scholar-profile { padding:1.5rem; }
+}
+@media (max-width:640px) {
+  footer { grid-template-columns:1fr; gap:2rem; }
+  .footer-bottom { flex-direction:column; gap:0.5rem; text-align:center; }
+  .fellowships-grid,.pres-item { grid-template-columns:55px 1fr; }
+}
+</style>
+</head>
+<body>
+<main id="main-content" tabindex="-1">
+
+<div class="page-header">
+  <p class="page-eyebrow">Scholarship</p>
+  <h1 class="page-title">Research <em>Interests</em></h1>
+  <p class="page-subtitle">Thirteen interconnected areas of inquiry grounded in Ubuntu philosophy, African Indigenous feminist thought, and applied human rights.</p>
+</div>
+<section class="content" aria-label="Research areas">
+  <div class="research-grid">
+    <article class="research-item">
+      <span class="research-number" aria-hidden="true">01</span>
+      <h3>Ubuntu Leadership</h3>
+      <p>Theorising and applying Ubuntu as a leadership philosophy rooted in collective being, relational accountability, and community-centred practice, with particular attention to African women's leadership traditions.</p>
+    </article>
+    <article class="research-item">
+      <span class="research-number" aria-hidden="true">02</span>
+      <h3>African Women and Girls' Leadership</h3>
+      <p>Centring African women and girls as rights-bearing leaders and knowledge-holders; researching how leadership is practised, transmitted, and recognised across generations and across urban and rural Zambia.</p>
+    </article>
+    <article class="research-item">
+      <span class="research-number" aria-hidden="true">03</span>
+      <h3>Educational Policy</h3>
+      <p>Examining how education policy can advance or obstruct girls' rights, Indigenous knowledge, and gender-responsive learning environments, with policy contributions to Brookings Institution and Canadian Senate reform debates.</p>
+    </article>
+    <article class="research-item">
+      <span class="research-number" aria-hidden="true">04</span>
+      <h3>African Ontological and Epistemological Frameworks (Ubuntu Womanism)</h3>
+      <p>Theorising Ubuntu Womanism as an original African ontological and epistemological framework that names and gives scholarly language to the leadership African women have long practised, grounded in Bemba community knowledge.</p>
+    </article>
+    <article class="research-item">
+      <span class="research-number" aria-hidden="true">05</span>
+      <h3>Human Rights in African and Global Contexts</h3>
+      <p>Examining human rights frameworks through African epistemologies and lived experience, with a focus on community-based approaches to rights recognition, advocacy, and education.</p>
+    </article>
+    <article class="research-item">
+      <span class="research-number" aria-hidden="true">06</span>
+      <h3>Indigenous Rights and Self-Determination</h3>
+      <p>Examining girls' and women's leadership rights in rural Zambia through Indigenous frameworks, with policy applications for international development and rights-based programming.</p>
+    </article>
+    <article class="research-item">
+      <span class="research-number" aria-hidden="true">07</span>
+      <h3>Gender and Women's Rights</h3>
+      <p>Advancing gender justice through African feminist and Ubuntu frameworks, centring women's self-determination, community leadership, and rights-based approaches to development.</p>
+    </article>
+    <article class="research-item">
+      <span class="research-number" aria-hidden="true">08</span>
+      <h3>Digital Equity, Technology Rights, and Gender Justice</h3>
+      <p>Investigating the intersection of gender justice, digital inclusion, and African Indigenous frameworks, including the ZAMWILL Girls Hackathon model as a case study in girls' digital rights and STEM leadership.</p>
+    </article>
+    <article class="research-item">
+      <span class="research-number" aria-hidden="true">09</span>
+      <h3>Strengths-Based Frameworks</h3>
+      <p>Applying strengths-based approaches to research and practice with African women and girls, centring asset-based perspectives and community capacities as the foundation for sustainable leadership and social change.</p>
+    </article>
+    <article class="research-item">
+      <span class="research-number" aria-hidden="true">10</span>
+      <h3>Community-Based Participatory Research</h3>
+      <p>Applying participatory action research, photo-narrative, and storytelling methodologies to centre the knowledge and lived experience of African women and girls in academic inquiry.</p>
+    </article>
+    <article class="research-item">
+      <span class="research-number" aria-hidden="true">11</span>
+      <h3>International Development and Applied Human Rights</h3>
+      <p>Connecting rights-based frameworks to development programming across education, gender, health, and community sectors, drawing on direct practice with the Canadian Red Cross, PEAS, and CAMARA.</p>
+    </article>
+    <article class="research-item">
+      <span class="research-number" aria-hidden="true">12</span>
+      <h3>Human Rights Education and Policy</h3>
+      <p>Designing and delivering rights-based curricula and policy analysis, including contributions to Canadian Senate reform debates and Brookings Institution policy dialogues.</p>
+    </article>
+    <article class="research-item">
+      <span class="research-number" aria-hidden="true">13</span>
+      <h3>Comparative and International Education</h3>
+      <p>Applying critical education theory across African and global contexts, with a focus on equity, anti-oppression, and Indigenous knowledge systems in educational systems and policy.</p>
+    </article>
+  </div>
+
+  <div style="margin-top:5rem; border-top:1px solid var(--gold-rule); padding-top:4rem;">
+    <p class="section-label">Teaching Competencies</p>
+    <h2 class="section-title">Areas of <em>Teaching</em></h2>
+    <ul style="list-style:none; display:grid; grid-template-columns:1fr 1fr; gap:0.75rem;" aria-label="Teaching competency areas">
+      <li class="teaching-area">Human Rights in African and Global Contexts</li>
+      <li class="teaching-area">Ubuntu Leadership and African Women and Girls' Leadership</li>
+      <li class="teaching-area">Indigenous Rights and Self-Determination</li>
+      <li class="teaching-area">Gender, Rights, and International Development</li>
+      <li class="teaching-area">Indigenous Development Theory and Practice</li>
+      <li class="teaching-area">Feminist and Indigenous Approaches to Peacebuilding and Conflict Transformation</li>
+      <li class="teaching-area">Strengths-Based and Community-Based Research Methods</li>
+      <li class="teaching-area">Applied Human Rights and Rights-Based Policy Analysis</li>
+    </ul>
+  </div>
+</section>
+
+</main>
+<footer role="contentinfo" aria-label="Site footer">
+  <div>
+    <p class="footer-name">Dr. Rachael Kalaba</p>
+    <p class="footer-tagline">Scholar-activist, Ubuntu Womanist, and advocate for African women's and girls' leadership rights across Zambia and the global African diaspora.</p>
+  </div>
+  <div>
+    <p class="footer-section-title">Contact</p>
+    <a href="mailto:racheal@africawill.ca" class="footer-link">racheal@africawill.ca</a>
+    <a href="mailto:racheal@zamwill.org" class="footer-link">racheal@zamwill.org</a>
+    <a href="tel:+14313361034" class="footer-link">(431) 336-1034</a>
+    <a href="https://linkedin.com/in/rachealkalaba" class="footer-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile, opens in new tab">LinkedIn Profile</a>
+  </div>
+  <div>
+    <p class="footer-section-title">Location</p>
+    <p class="footer-location">Toronto, Ontario, Canada</p>
+    <p class="footer-location">Lusaka, Zambia</p>
+  </div>
+</footer>
+<div class="footer-bottom">
+  <p>Dr. Rachael Kalaba, Ph.D. &nbsp;&middot;&nbsp; Scholar &nbsp;&middot;&nbsp; Founder &nbsp;&middot;&nbsp; Leader</p>
+  <p class="accent">Ubuntu: I am because we are.</p>
+</div>
+</body>
+</html>
