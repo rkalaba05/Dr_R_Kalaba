@@ -232,9 +232,212 @@ footer > div { min-width:0; }
   .board-years { text-align:left; }
 }
 
+
+
+
+/* ══════════ NAVIGATION BAR — single line + More dropdown ══════════ */
+.site-nav {
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  background: var(--white);
+  border-bottom: 2px solid var(--gold-strong);
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 0 5rem;
+  min-height: 64px;
+  flex-wrap: nowrap;          /* never wrap — overflow goes to More */
+  overflow: visible;
+}
+
+.site-nav .nav-brand {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: var(--text-dark);
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  flex-shrink: 0;
+}
+.site-nav .nav-brand:hover { color: var(--gold-text); }
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  align-items: stretch;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+  flex-wrap: nowrap;
+  min-width: 0;
+}
+
+.nav-list > li { display: flex; flex-shrink: 0; }
+
+.nav-list > li > a {
+  font-family: var(--font-raleway);
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 400;
+  color: var(--text-mid);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+  transition: color 0.2s, border-color 0.2s;
+  white-space: nowrap;
+}
+.nav-list > li > a:hover { color: var(--gold-text); border-bottom-color: var(--gold-rule); }
+.nav-list > li > a[aria-current="page"] {
+  color: var(--gold-text);
+  font-weight: 500;
+  border-bottom-color: var(--gold-strong);
+}
+
+/* ── MORE button ── */
+.nav-more { position: relative; display: flex; flex-shrink: 0; }
+.nav-more[hidden] { display: none; }
+
+.nav-more-btn {
+  font-family: var(--font-raleway);
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 400;
+  color: var(--text-mid);
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  min-height: 44px;
+  padding: 0;
+  white-space: nowrap;
+  transition: color 0.2s, border-color 0.2s;
+}
+.nav-more-btn:hover { color: var(--gold-text); border-bottom-color: var(--gold-rule); }
+.nav-more-btn[aria-expanded="true"] { color: var(--gold-text); border-bottom-color: var(--gold-strong); }
+.nav-more-btn.has-current { color: var(--gold-text); font-weight: 500; border-bottom-color: var(--gold-strong); }
+
+.nav-more-btn .chev {
+  display: inline-block;
+  font-size: 0.6rem;
+  transition: transform 0.2s;
+  line-height: 1;
+}
+.nav-more-btn[aria-expanded="true"] .chev { transform: rotate(180deg); }
+
+/* ── Dropdown panel ── */
+.nav-more-list {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 2px;
+  min-width: 200px;
+  background: var(--white);
+  border: 1px solid var(--gold-strong);
+  border-top: 2px solid var(--gold-strong);
+  list-style: none;
+  padding: 0.4rem 0;
+  box-shadow: 0 6px 20px rgba(58,46,26,0.10);
+  z-index: 300;
+}
+.nav-more-list[hidden] { display: none; }
+
+.nav-more-list li { display: block; }
+
+.nav-more-list a {
+  font-family: var(--font-raleway);
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 400;
+  color: var(--text-mid);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 1.4rem;
+  border-left: 3px solid transparent;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+  white-space: nowrap;
+}
+.nav-more-list a:hover { background: #faf6ee; color: var(--gold-text); border-left-color: var(--gold-strong); }
+.nav-more-list a[aria-current="page"] {
+  color: var(--gold-text);
+  font-weight: 500;
+  border-left-color: var(--gold-strong);
+  background: #faf6ee;
+}
+
+/* ── Skip link ── */
+.skip-link { position:absolute; left:-9999px; width:1px; height:1px; overflow:hidden; }
+.skip-link:focus {
+  position: fixed; top:0; left:0; width:auto; height:auto;
+  padding: 1rem 2rem; background: var(--gold-text); color: var(--white);
+  font-family: 'Jost', sans-serif; font-size: 1rem; font-weight: 500;
+  text-decoration: none; z-index: 9999; outline: 3px solid var(--text-dark);
+}
+
+.hero-header { min-height: calc(100vh - 64px); }
+
+@media (max-width: 1180px) {
+  .site-nav { padding: 0 2rem; gap: 1.25rem; }
+  .nav-list { gap: 1.1rem; }
+  .nav-list > li > a, .nav-more-btn { font-size: 0.72rem; letter-spacing: 0.1em; }
+}
+@media (max-width: 700px) {
+  .site-nav { padding: 0 1.5rem; gap: 1rem; min-height: 58px; }
+  .site-nav .nav-brand { font-size: 1rem; }
+  .nav-list { gap: 0.9rem; }
+  .nav-list > li > a, .nav-more-btn { font-size: 0.7rem; letter-spacing: 0.08em; }
+  .hero-header { min-height: calc(100vh - 58px); }
+}
+
 </style>
 </head>
 <body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<nav class="site-nav" aria-label="Main navigation">
+  <a href="index.html" class="nav-brand">Dr Racheal Kalaba</a>
+
+  <ul class="nav-list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="research.html" aria-current="page">Research</a></li>
+      <li><a href="employment.html">Experience</a></li>
+      <li><a href="education.html">Education</a></li>
+      <li><a href="publications.html">Publications</a></li>
+      <li><a href="grants.html">Grants</a></li>
+      <li><a href="presentations.html">Presentations</a></li>
+      <li><a href="service.html">Service</a></li>
+  </ul>
+
+  <div class="nav-more" hidden>
+    <button type="button"
+            class="nav-more-btn"
+            aria-expanded="false"
+            aria-haspopup="true"
+            aria-controls="nav-more-list">
+      More <span class="chev" aria-hidden="true">&#9660;</span>
+    </button>
+    <ul class="nav-more-list" id="nav-more-list" hidden></ul>
+  </div>
+</nav>
+
 <main id="main-content" tabindex="-1">
 <div class="page-header">
   <p class="page-eyebrow">Scholarship</p>
@@ -348,5 +551,96 @@ footer > div { min-width:0; }
   <p>Dr Racheal Kalaba, PhD &nbsp;&middot;&nbsp; Scholar &nbsp;&middot;&nbsp; Founder &nbsp;&middot;&nbsp; Leader</p>
   <p class="accent">Ubuntu: I am because we are.</p>
 </div>
+
+<script>
+(function () {
+  var nav      = document.querySelector('.site-nav');
+  if (!nav) return;
+  var list     = nav.querySelector('.nav-list');
+  var moreWrap = nav.querySelector('.nav-more');
+  var moreBtn  = nav.querySelector('.nav-more-btn');
+  var moreList = nav.querySelector('.nav-more-list');
+  if (!list || !moreWrap || !moreBtn || !moreList) return;
+
+  function isOverflowing() {
+    return nav.scrollWidth > nav.clientWidth + 1;
+  }
+
+  function closeMenu() {
+    moreList.hidden = true;
+    moreBtn.setAttribute('aria-expanded', 'false');
+  }
+
+  function openMenu() {
+    moreList.hidden = false;
+    moreBtn.setAttribute('aria-expanded', 'true');
+  }
+
+  function layout() {
+    // 1. Reset: everything back into the main bar
+    while (moreList.firstChild) {
+      list.appendChild(moreList.firstChild);
+    }
+    moreWrap.hidden = true;
+    closeMenu();
+
+    // 2. If it all fits on one line, we are done
+    if (!isOverflowing()) {
+      moreBtn.classList.remove('has-current');
+      return;
+    }
+
+    // 3. Reveal More, then move items off the end until it fits
+    moreWrap.hidden = false;
+    var guard = 0;
+    while (isOverflowing() && list.children.length > 1 && guard < 50) {
+      moreList.insertBefore(list.lastElementChild, moreList.firstChild);
+      guard++;
+    }
+
+    // 4. Flag More in gold if it now holds the current page
+    var hasCurrent = !!moreList.querySelector('[aria-current="page"]');
+    moreBtn.classList.toggle('has-current', hasCurrent);
+  }
+
+  // Toggle
+  moreBtn.addEventListener('click', function (e) {
+    e.stopPropagation();
+    if (moreList.hidden) { openMenu(); } else { closeMenu(); }
+  });
+
+  // Close on outside click
+  document.addEventListener('click', function (e) {
+    if (!moreWrap.contains(e.target)) closeMenu();
+  });
+
+  // Close on Escape, return focus to the button
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && !moreList.hidden) {
+      closeMenu();
+      moreBtn.focus();
+    }
+  });
+
+  // Close when focus leaves the menu entirely
+  moreWrap.addEventListener('focusout', function (e) {
+    if (!moreWrap.contains(e.relatedTarget)) closeMenu();
+  });
+
+  // Recalculate on resize
+  var t;
+  window.addEventListener('resize', function () {
+    clearTimeout(t);
+    t = setTimeout(layout, 120);
+  });
+
+  // Run once fonts have settled so measurements are accurate
+  if (document.fonts && document.fonts.ready) {
+    document.fonts.ready.then(layout);
+  }
+  window.addEventListener('load', layout);
+  layout();
+})();
+</script>
 </body>
 </html>
