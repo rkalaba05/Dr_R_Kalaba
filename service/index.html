@@ -195,6 +195,7 @@ footer > div { min-width:0; }
 @media (max-width:960px) {
   .content { padding:3rem 2rem; }
   .page-header { padding:3rem 2rem 2rem; }
+  .page-header figure { margin-left:0 !important; flex-basis:260px !important; }
   .hero-header { padding:3rem 2rem; }
   .about-grid,.two-col { grid-template-columns:1fr; gap:3rem; }
   .research-grid,.edu-grid,.fellowships-grid,.skills-grid { grid-template-columns:1fr; }
@@ -439,18 +440,19 @@ footer > div { min-width:0; }
 </nav>
 
 <main id="main-content" tabindex="-1">
-<div class="page-header">
-  <p class="page-eyebrow">Academic Citizenship</p>
-  <h1 class="page-title">Service, Teaching <em>and Engagement</em></h1>
-  <p class="page-subtitle">Undergraduate and graduate teaching, keynote speaking, advocacy, community leadership, peer review, and rights-based applied practice.</p>
-</div>
-
-<section class="content" aria-label="Portrait of Dr Racheal Kalaba" style="padding-top:3.5rem; padding-bottom:0;">
-  <div class="portrait-frame" style="max-width:400px;">
-    <img src="https://rkalaba.ca/images/portrait-casual.jpg" alt="Dr Racheal Kalaba seated with her chin resting on her hand, wearing a black textured top against a concrete wall." />
-    <p class="portrait-caption">Dr Racheal Kalaba &nbsp;&middot;&nbsp; Photo by Selina McCallum</p>
+<div class="page-header" style="display:flex; flex-wrap:wrap; gap:3.5rem; align-items:center; justify-content:space-between;">
+  <div style="flex:1 1 340px; min-width:0;">
+    <p class="page-eyebrow">Academic Citizenship</p>
+    <h1 class="page-title">Service, Teaching <em>and Engagement</em></h1>
+    <p class="page-subtitle">Undergraduate and graduate teaching, keynote speaking, advocacy, community leadership, peer review, and rights-based applied practice.</p>
   </div>
-</section>
+  <figure style="flex:0 0 340px; max-width:340px; margin:0 0 0 auto;">
+    <img src="https://rkalaba.ca/images/portrait-casual.jpg"
+         alt="Dr Racheal Kalaba seated with her chin resting on her hand, wearing a black textured top against a concrete wall."
+         style="width:100%; display:block; border:1px solid var(--gold-border);" />
+    <figcaption class="portrait-caption" style="margin-top:0.85rem;">Dr Racheal Kalaba &nbsp;&middot;&nbsp; Photo by Selina McCallum</figcaption>
+  </figure>
+</div>
 
 <section class="content" aria-label="Teaching experience">
   <p class="section-label">Teaching Experience</p>
