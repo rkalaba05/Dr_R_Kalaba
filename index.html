@@ -196,6 +196,7 @@ footer > div { min-width:0; }
   .content { padding:3rem 2rem; }
   .page-header { padding:3rem 2rem 2rem; }
   .hero-header { padding:3rem 2rem; }
+  .hero-figure { order:0 !important; margin:0 0 2.5rem 0 !important; flex-basis:240px !important; }
   .about-grid,.two-col { grid-template-columns:1fr; gap:3rem; }
   .research-grid,.edu-grid,.fellowships-grid,.skills-grid { grid-template-columns:1fr; }
   .awards-list { grid-template-columns:1fr; }
@@ -440,15 +441,23 @@ footer > div { min-width:0; }
 
 <main id="main-content" tabindex="-1">
 <section aria-label="Introduction" class="hero-header">
-  <img src="https://rkalaba.ca/images/portrait-standing.jpg" alt="Portrait of Dr Racheal Kalaba standing in a white top and patterned trousers against a light grey studio background." class="hero-portrait" />
+  <div class="hero-top" style="display:flex; flex-wrap:wrap; gap:4rem; align-items:center; justify-content:space-between; margin-bottom:4rem;">
+    <div style="flex:1 1 380px; min-width:0;">
   <p class="hero-eyebrow">Scholar-Activist &nbsp;&middot;&nbsp; Founder &nbsp;&middot;&nbsp; Educator</p>
   <h1 class="hero-name">Dr Racheal<br /><em>Kalaba</em></h1>
   <p class="hero-academic-title">PhD &nbsp;&middot;&nbsp; Adult Education &amp; Community Development</p>
   <p class="hero-description">Scholar-activist, author, and educator whose work spans Ubuntu philosophy, African Indigenous knowledge systems, and girls' and women's leadership across Africa and the diaspora. Racheal named and theorised Ubuntu Womanism, a framework that provides scholarly language for the leadership African women have long practised.</p>
-  <div class="hero-cta" role="list">
+  <div class="hero-cta" role="list" style="margin-bottom:0;>
     <a href="https://rkalaba.ca/publications" class="btn-primary">View Publications</a>
     <a href="https://rkalaba.ca/about" class="btn-outline">Learn More</a>
     <a href="mailto:racheal.kalaba@alumni.utoronto.ca" class="btn-outline">Get in Touch</a>
+  </div>
+    </div>
+  <figure class="hero-figure" style="flex:0 0 340px; max-width:340px; order:-1; margin-right:3rem;">
+    <img src="https://rkalaba.ca/images/portrait-standing.jpg"
+         alt="Portrait of Dr Racheal Kalaba standing in a white top and patterned trousers against a light grey studio background."
+         style="width:100%; display:block; border:1px solid var(--gold-border);" />
+  </figure>
   </div>
   <div class="stat-grid" role="list" aria-label="Key statistics">
     <div class="stat-card" role="listitem">
